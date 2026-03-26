@@ -37,6 +37,8 @@ Every ESP has a bot filter. The question is how they calibrate it — and that c
 
 We built our own filtering model at Workweek because we wanted to know what was actually real. Then we open-sourced it because the email industry needs shared standards for what counts as a human open, the same way display advertising standardized viewable impressions 15 years ago.
 
+**Read our proposal for an industry-wide standard:** [The Email Engagement Measurement Standard (EEMS)](docs/IAB_EMAIL_MEASUREMENT_STANDARD.md)
+
 There is nothing proprietary about pattern matching on timing signatures and click cadences. The only reason these models are black boxes is because transparency would expose how much each platform lets through.
 
 ---
