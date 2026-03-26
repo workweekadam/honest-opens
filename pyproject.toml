@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "honest-opens"
+version = "1.0.0"
+description = "Open-source bot filtering for newsletter engagement. ESP-agnostic algorithm for separating human opens and clicks from bot traffic."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+authors = [
+    {name = "Workweek", email = "adam@workweek.com"},
+]
+keywords = ["email", "newsletter", "bot-filtering", "open-rate", "click-rate", "ESP", "engagement"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Communications :: Email",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+]
+
+[project.optional-dependencies]
+pandas = ["pandas>=1.0"]
+dev = ["pytest>=7.0", "pandas>=1.0"]
+
+[project.scripts]
+honest-opens = "honest_opens.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/workweek/honest-opens"
+Documentation = "https://github.com/workweek/honest-opens/tree/main/docs"
+Repository = "https://github.com/workweek/honest-opens"
+Issues = "https://github.com/workweek/honest-opens/issues"
+
+[tool.setuptools.packages.find]
+include = ["honest_opens*"]
